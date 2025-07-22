@@ -54,6 +54,7 @@ public class WildTests extends TestBase{
         );
     }
     @MethodSource
+    @Tag("SMOKE")
     @ParameterizedTest(name = "Заголовки при нажитии на кнопку \"Адреса")
     void titlsOnClickBattonAddress(String chapter, List<String> expectedLinks){
         $$(".navbar-pc__item").findBy(text(chapter)).click();
